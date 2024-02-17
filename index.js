@@ -2,9 +2,18 @@ import express from "express";
 import connect from "./db.js";
 import createUserRouter from "./Routes/CreateUser.js";
 import dotenv from "dotenv";
+import cors from "cors"
 dotenv.config();
 
 const app = express();
+
+app.use(cors(
+  {
+    origin:["https://bizarre-coders-official.vercel.app/"],
+    methodsL["POST","GET"],
+    credentials:true
+  }
+))
 
 
 const port = process.env.PORT;
