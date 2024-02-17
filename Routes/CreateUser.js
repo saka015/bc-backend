@@ -5,10 +5,11 @@ import jwt from "jsonwebtoken";
 import user from "../models/User.js";
 import Registration from "../models/registration.js"
 import nodemailer from "nodemailer";
-import { dblClick } from "@testing-library/user-event/dist/click.js";
+import dotenv from "dotenv";
+dotenv.config();
 
 const router = express.Router();
-const jwtSecret = "MyNameisSakaKamalNayan";
+const jwtSecret = process.env.SECRET_KEY;
 
 router.post(
   "/createuser",
