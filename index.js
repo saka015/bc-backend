@@ -10,7 +10,7 @@ const app = express();
 app.use(cors(
   {
     origin:["https://bizarre-coders-official.vercel.app/"],
-    methodsL["POST","GET"],
+    methods:["POST","GET"],
     credentials:true
   }
 ))
