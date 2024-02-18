@@ -22,7 +22,7 @@ connect();
 app.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
-    "https://bizarre-coders-official.vercel.app/"
+    "http://localhost:3000"
   );
   res.header(
     "Access-Control-Allow-Headers",
